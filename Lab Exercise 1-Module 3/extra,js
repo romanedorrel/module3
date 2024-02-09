@@ -1,0 +1,105 @@
+//console.log(addition)
+
+//function checkAge returns a value when called
+// function checkAge(age){
+//     if (age >=18){
+//         return 'adult';
+//     }
+//     return 'non-adult';
+// }
+
+// console.log(checkAge(21));
+// console.log(checkAge(13));
+
+// const sayHiArrow = () => console.log('Hi');
+
+const phone = {
+    model: 'iphone 11',
+    color: 'black',
+    storage: 500
+}
+
+// if(phone.color) console.log(`My ${phone.model}`)
+// if(phone.storage){
+//     console.log(`My ${phone.model} has ${phone.storage}GB`)
+// }
+// let goal = 5;
+// for(let i=0; i <goal; i++) {
+//     console.log(`iteration ${i} of ${goal}`)
+// }
+// for(let key in phone){
+//     console.log('key: ' + key)
+//     console.log('value: ' + phone[key])
+// }
+
+// let person1 = {name: 'Anna'}; //object - stored by reference
+// let person2 = person1; // person2 points to same memory location as person1
+// person1.name = 'Brian';
+// console.log(person2.name); //Brian, even though we changed person1.name
+// let person3 = 'carly';
+// let person4 = person3;
+// person3 = 'David';
+// console.log(person4);
+
+//const user = { name: 'Elliot', age: 27, location: 'New Zealand'};
+// const userClone ={};
+// for(let key in user){
+//     userClone[key] = user[key];
+// }
+// console.log(userClone);
+// const userClone = {...user};
+// console.log(userClone);
+// const vehicle = {make: 'Toyota', Model: 'Camry'}
+// const mergeUser = {...user, ...vehicle};
+// console.log(mergeUser);
+// const box1 = {
+//     weight: '20kg',
+//     dimensions: {
+//         width: '30cm',
+//         height: '10cm'
+//     }
+// }
+// const box2 = {...box1};
+// box1.dimensions.height = '12cm'
+// console.log(box2);
+
+// const user = {
+//     name: 'Bilbo Baggins',
+//     sing: function(){
+//         console.log('Roads go ever ever on');
+//     },
+//     sing2(){
+//         console.log('Over rock and under tree');
+//     }
+// }
+//     user.sing();
+//     user.sing2();
+
+// const user = {
+//     name: 'Bilbo Baggins',
+//     printGreeting(){
+//         console.log(`Hello, Im ${this.name}`)
+//     }
+// }
+// user.printGreeting();
+
+// const user = {
+//     name: 'Bilbo Baggins',
+//     printThis(){
+//         console.log(this)
+//         return this;
+//     },
+//     printGreeting(){
+//         console.log(`Hello im ${this.name} `)
+//     }
+// }
+// user.printThis().printGreeting();
+
+function user(first, last){
+    this.first = first;
+    this.last = last;
+    this.hasShortName = () => this.first.length <= 3;
+}
+let user1 = new user('Tim', 'Bob', 'Smith')
+console.log(user1) // User { first: 'Tim', last: 'Smith' }
+console.log(user1.hasShortName()) 
